@@ -10,8 +10,8 @@ function createGrid() {
   for (let i = 0; i < size * size; i++) {
     const gridSquare = document.createElement("div");
     gridSquare.classList.add("squares");
-    gridSquare.style.width = `calc(35vw / ${size})`
-    gridSquare.style.height = `calc(35vw / ${size})`
+    gridSquare.style.width = `calc(30vw / ${size})`
+    gridSquare.style.height = `calc(30vw / ${size})`
     grid.appendChild(gridSquare);
 
     gridSquare.addEventListener("mouseover", () => {
@@ -58,4 +58,3 @@ clearButton.addEventListener("click", function() {
   document.querySelectorAll('.squares').forEach(e => e.remove());
   createGrid()
 })
-
