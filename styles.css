@@ -1,0 +1,22 @@
+:root {
+  --color1: #23291F;
+  --color2: #474E46;
+  --color3: #B8BFAE;
+  --color4: #F2EED8;
+  --color5: #BFB28A;
+}
+
+body {
+  background-color: var(--color4);
+  align-items: center;
+}
+
+#top-spacer {
+  height: 6vh;
+}
+
+#deviceBody {
+  background-color: var(--color3);
+  width: 60vw;
+  margin: 0 auto;
+}
