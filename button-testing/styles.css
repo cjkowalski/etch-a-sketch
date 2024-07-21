@@ -1,92 +1,137 @@
-.button-14 {
-  touch-action: manipulation;
-  -webkit-appearance: none;
-  appearance: none;
+.button {
   position: relative;
   border-width: 0;
   padding: 0 8px 12px;
-  min-width: 10em;
   box-sizing: border-box;
   background: transparent;
-  font: inherit;
+  font: sans-serif;
   cursor: pointer;
-}
-
-.button-14-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   z-index: 0;
-  padding: 8px 16px;
-  transform: translateY(0);
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 -1px rgba(0, 0, 0, .25);
-  transition-property: transform;
-  transition-duration: .2s;
-  -webkit-user-select: none;
-  user-select: none;
+  margin-right: 2px;
 }
 
-.button-14:active .button-14-top {
-  transform: translateY(6px);
+.button-top {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ z-index: 0;
+ padding: 8px 16px;
+ transform: translateY(0);
+ text-align: center;
+ color: #d5cdc3;
+ text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+ transition-property: transform;
+ transition-duration: 0.2s;
+ -webkit-user-select: none;
+ user-select: none;
 }
 
-.button-14-top::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
+.button:active .button-top {
+ transform: translateY(6px);
+}
+
+.button-top::after {
+ content: '';
+ background-image: radial-gradient(#5a625f, #333a38);
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ z-index: -1;
+ border-radius: 4px;
+ box-sizing: content-box;
+ box-shadow: 0 0 0px 1px #5a625f inset;
+ transition-property: border-radius, padding, width, transform;
+ transition-duration: 0.2s;
+}
+
+.button:active .button-top::after {
+ border-radius: 6px;
+ padding: 0 2px;
+}
+
+.button-bottom {
+ background-color: #4a524f;
+ position: absolute;
+ box-sizing: content-box;
+ width: calc(100% - 8px);
+ height: calc(100% - 8px);
+ bottom: 4px;
+ left: 4px;
+ z-index: -1;
+ border-radius: 8px/16px 16px 8px 8px;
+ padding-top: 6px;
+ box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5), inset 0 -1px 3px 3px rgba(0, 0, 0, .4);
+ transition-property: border-radius, padding-top;
+ transition-duration: .2s;
+}
+
+.button:active .button-bottom {
+ border-radius: 10px 10px 8px 8px / 8px;
+ padding-top: 0;
+}
+
+.button-base {
+ position: absolute;
+ z-index: -2;
+ top: 4px;
+ left: 0;
+ border-radius: 12px;
+ width: 100%;
+ height: calc(100% - 4px);
+ background-color: rgba(0, 0, 0, .15);
+ box-shadow: 0 1px 1px 0 #8d897fc0, inset 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+
+
+
+
+
+
+
+/* CSS */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
   border-radius: 4px;
-  width: 100%;
-  height: 100%;
-  box-sizing: content-box;
-  background-image: radial-gradient(#cd3f64, #9d3656);
-  text-align: center;
-  color: #fff;
-  box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, .2), 0 1px 2px 1px rgba(255, 255, 255, .2);
-  transition-property: border-radius, padding, width, transform;
-  transition-duration: .2s;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
 }
 
-.button-14:active .button-14-top::after {
-  border-radius: 6px;
-  padding: 0 2px;
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
-
-.button-14-bottom {
-  position: absolute;
-  z-index: -1;
-  bottom: 4px;
-  left: 4px;
-  border-radius: 8px / 16px 16px 8px 8px;
-  padding-top: 6px;
-  width: calc(100% - 8px);
-  height: calc(100% - 10px);
-  box-sizing: content-box;
-  background-color: #803;
-  background-image: radial-gradient(4px 8px at 4px calc(100% - 8px), rgba(255, 255, 255, .25), transparent), radial-gradient(4px 8px at calc(100% - 4px) calc(100% - 8px), rgba(255, 255, 255, .25), transparent), radial-gradient(16px at -4px 0, white, transparent), radial-gradient(16px at calc(100% + 4px) 0, white, transparent);
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5), inset 0 -1px 3px 3px rgba(0, 0, 0, .4);
-  transition-property: border-radius, padding-top;
-  transition-duration: .2s;
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
 }
 
-
-.button-14:active .button-14-bottom {
-  border-radius: 10px 10px 8px 8px / 8px;
-  padding-top: 0;
-}
-
-
-.button-14-base {
-  position: absolute;
-  z-index: -2;
-  top: 4px;
-  left: 0;
-  border-radius: 12px;
-  width: 100%;
-  height: calc(100% - 4px);
-  background-color: rgba(0, 0, 0, .15);
-  box-shadow: 0 1px 1px 0 rgba(255, 255, 255, .75), inset 0 2px 2px rgba(0, 0, 0, .25);
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
 }
