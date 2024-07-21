@@ -1,13 +1,13 @@
 :root {
-  --color1: #23291F;
-  --color2: #474E46;
-  --color3: #B8BFAE;
-  --color4: #F2EED8;
-  --color5: #BFB28A;
+  --color1: #4a524f;
+  --color2: #5c605b;
+  --color3: #6e6e66;
+  --color4: #8d897f;
+  --color5: #d5cdc3;
 }
 
 body {
-  background-color: var(--color4);
+  background-color: var(--color5);
   align-items: center;
 }
 
@@ -16,7 +16,56 @@ body {
 }
 
 #deviceBody {
-  background-color: var(--color3);
-  width: 60vw;
+  background-color: var(--color2);
+  width: 35vw;
   margin: 0 auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: var(--color5);
+}
+
+#button-row {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: var(--color1);
+  border: 0;
+  border-radius: 3px;
+  color: var(--color5);
+  font-family: sans-serif;
+  height: 25px;
+  margin: 3px;
+
+  /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+
+}
+
+
+
+#left-side .button {
+  width: 40px;
+}
+
+#right-side .button {
+  width: 60px;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.squares {
+  /* height: calc(60vw / 4);
+  width: calc(60vw / 4); */
+  background-color: var(--color3);
+  box-sizing: border-box;
+  border: 2px solid var(--color2);
 }
