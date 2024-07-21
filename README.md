@@ -48,4 +48,4 @@ The button formatting in the CSS uses a clean, transparent background with disti
 
 <br>
 
-Super happy with how this project came out, I am excited to star the next!
+Super happy with how this project came out, I am excited to start the next!
